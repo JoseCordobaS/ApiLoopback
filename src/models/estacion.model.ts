@@ -1,7 +1,7 @@
-import {Model, model, property} from '@loopback/repository';
+import {Entity, model, property} from '@loopback/repository';
 
 @model()
-export class Estacion extends Model {
+export class Estacion extends Entity {
   @property({
     type: 'string',
     id: true,
@@ -22,16 +22,16 @@ export class Estacion extends Model {
   direccion: string;
 
   @property({
-    type: 'number',
+    type: 'string',
     required: true,
   })
-  coordenada_x: number;
+  coordenada_x: string;
 
   @property({
-    type: 'number',
+    type: 'string',
     required: true,
   })
-  coordenada_y: number;
+  coordenada_y: string;
 
   @property({
     type: 'string',
